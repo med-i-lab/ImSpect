@@ -37,7 +37,7 @@ python train_ssl.py --arch resnet18 --epochs 300 --lr 0.2
 ### 2. Supervised Learning:
 You can run the code ... 
 ```
-python train_sup.py --exp-dir <experiment-dir>  --pretrained <path-of-pretrained-ssl-model> --arch resnet18 --epochs 300  --lr-head 0.2 --lr-backbone 0.002 
+python train_linearCL.py --exp-dir <experiment-dir>   --ckpt <path-of-pretrained-ssl-model> --learning_rate 0.001 --epochs 300 --model resnet18 --cosine
 ```
 
 ---
