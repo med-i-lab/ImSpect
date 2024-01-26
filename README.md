@@ -20,22 +20,25 @@ We propose a new method for characterizing tissue at the surgical margins, using
 
 ---
 
-<!-- -->
-  >> Codes will be uploaded soon ...
+<!-- 
+  >> Codes will be uploaded soon ...-->
 
 ## Running the code
 
-<!-- First you need to install dependencies by running `pip install -r requirements.txt`. -->
-
-### 1. Self-Supervised Learning: 
-You can run the code ... 
-```
-python train_ssl.py --arch resnet18 --epochs 300 --lr 0.2 
-```
+### 1. Image Generation
+The `spec2img.py` script provides a comprehensive approach to convert 1D spectra into 2D images using various techniques like Markov Transition Fields (MTF), Gramian Angular Field Summation (GAFS), and Gramian Angular Field Difference (GAMD).
 
 ---
-### 2. Supervised Learning:
-You can run the code ... 
+
+### 2. Self-Supervised Learning: 
+Begin by utilizing the SIMCLR code available in this repository. This repository contains the necessary scripts and modules for implementing self-supervised learning model. Proceed to train your model using the self-supervised learning approach outlined in the repository. This step involves learning representations without using labeled data.
+
+#### Saving the Trained Model: After the training process is complete, save the trained model. This will preserve the learned weights, which are crucial for the next step.
+
+---
+### 3. Supervised Learning:
+Proceed the supervised training by adding a Linear Classifiera on the top of the last layer of the self-supervised model. 
+We need to initialize the encoder part of your model with the weights from the saved SSL trained model. These pre-trained weights will serve as the starting point for further supervised learning. You can run the following command to run this step completely:
 ```
 python train_linearCL.py --exp-dir <experiment-dir>   --ckpt <path-of-pretrained-ssl-model> --learning_rate 0.001 --epochs 300 --model resnet18 --cosine
 ```
