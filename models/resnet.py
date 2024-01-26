@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
-# Copyright (c) Facebook, Inc. and its affiliates.
-# All rights reserved.
-#
-# This source code is licensed under the license found in the
-# LICENSE file in the root directory of this source tree.
-#
+"""
+Code Reference:
+This script is adapted from simclr-pytorch at https://github.com/AndrewAtanov/simclr-pytorch.
+
+For the original version of the code, please refer to the mentioned repository.
+"""
 
 import torch.nn as nn
 import torchvision.models as models
