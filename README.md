@@ -31,7 +31,7 @@ The `spec2img.py` script provides a comprehensive approach to convert 1D spectra
 ---
 
 ### 2. Self-Supervised Learning: 
-Begin by utilizing the SIMCLR code available in this repository. This repository contains the necessary scripts and modules for implementing self-supervised learning model. Proceed to train your model using the self-supervised learning approach outlined in the repository. This step involves learning representations without using labeled data.
+Begin by utilizing the SIMCLR code available in this [repository](https://github.com/AndrewAtanov/simclr-pytorch). This repository contains the necessary scripts and modules for implementing self-supervised learning model. Proceed to train your model using the self-supervised learning approach outlined in the repository. This step involves learning representations without using labeled data.
 
 #### Saving the Trained Model: After the training process is complete, save the trained model. This will preserve the learned weights, which are crucial for the next step.
 
